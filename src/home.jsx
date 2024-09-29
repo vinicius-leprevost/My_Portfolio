@@ -14,7 +14,6 @@ export default function Home() {
                     look around and discover how my skills in programming and artificial intelligence can bring your
                     ideas to life.
                 </p>
-
                 <h2>Mission Statement</h2>
                 <p>
                     My mission is to create impactful digital experiences by leveraging cutting-edge AI and
@@ -23,7 +22,6 @@ export default function Home() {
                     is to constantly evolve and contribute to shaping the future through technology, ensuring that
                     every project I undertake embodies innovation, precision, and reliability.
                 </p>
-
             </div>
         </div>
     );
