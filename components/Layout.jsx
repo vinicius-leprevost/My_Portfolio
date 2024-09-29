@@ -18,7 +18,7 @@ const viewCredits = () => {
               <li><strong>Contact Number:</strong>(437) 335-1142</li>
               <li><strong>Last Update:</strong> 09-28-2024</li>
             </ul>`,
-        icon: 'success',
+        icon: 'info',
         confirmButtonText: 'Close'
     });
 };
