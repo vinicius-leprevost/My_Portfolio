@@ -6,6 +6,25 @@ img {
     margin-bottom: -30px;
 }
 
+.card {
+    border: 1px solid #646cfd;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    background-color: #646cfd;
+}
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.card ul {
+    list-style-type: none;
+    padding: 0;
+}
+.card ul li {
+    margin: 5px 0;
+}
+
 .page-container {
     display: flex;
     flex-direction: column;
@@ -15,6 +34,8 @@ img {
     text-align: center;
     background-color: var(--background-color);
     color: var(--text-color);
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .page-content {
@@ -23,7 +44,25 @@ img {
     align-items: center;
     max-width: 800px;
     gap: var(--spacing);
+
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
 
 .image-container {
     margin-bottom: var(--spacing);
