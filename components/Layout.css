@@ -1,5 +1,40 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #202020;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.creditsBt {
+    margin-left: var(--spacing);
+    margin-bottom: var(--spacing);
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
 .logo-image {
     width: 250px;
     height: 250px;
-    object-fit: cover;
+    margin-right: 20px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    color: #646cfd;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-menu a:hover {
+    color: white;
 }

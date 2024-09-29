@@ -12,7 +12,7 @@ export default function Contact() {
         email: '',
         title: '',
         description: '',
-        id: ''
+        id: Math.floor(Math.random() * 1000000)
     });
 
     const navigate = useNavigate();
@@ -42,7 +42,7 @@ export default function Contact() {
               <li><strong>Email:</strong> ${email}</li>
               <li><strong>Title:</strong> ${title}</li>
               <li><strong>Description:</strong> ${description}</li>
-              <li><strong>ID:></strong> ${id}</li>
+              <li><strong>ID:</strong> ${id}</li>
             </ul>`,
             icon: 'success',
             confirmButtonText: 'Close'
@@ -56,7 +56,6 @@ export default function Contact() {
     return (
         <div className="page-container">
             <div className="page-content">
-                <h2>Contact Form</h2>
                 <div className="card">
                     <form onSubmit={handleSubmit}>
                         <div className="form-group">

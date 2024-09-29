@@ -6,7 +6,6 @@ export default function Services() {
     return(
         <div className="page-container">
             <div className="page-content">
-                <h2>Services Offered</h2>
                 <div className="card">
                     <h3>1. Custom Software Development</h3>
                     <p className="text-content">

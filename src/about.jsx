@@ -39,6 +39,9 @@ export default function About() {
                     <button onClick={handleToggleResume} className="resume-button">
                         {showResume ? 'Hide Resume' : 'Show Resume'}
                     </button>
+                    <a href="../src/assets/resume/resume.pdf" download>
+                        <button className={"downloadBt"}>Download PDF</button>
+                    </a>
                     {showResume && <img src={resumeImage} alt="Resume" className="resume-image" />}
                 </div>
             </div>

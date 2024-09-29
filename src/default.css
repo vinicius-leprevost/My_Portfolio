@@ -7,11 +7,14 @@ img {
 }
 
 .card {
-    border: 1px solid #646cfd;
+    width: 100%; /* Makes the card fill the container width */
+    max-width: 800px; /* Sets a max width for larger screens */
     padding: 20px;
-    margin: 20px 0;
+    background-color: #646cfd; /* Consistent background color */
+    color: white;
     border-radius: 10px;
-    background-color: #646cfd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a shadow for better look */
+    margin: 0 auto;
 }
 .card h3 {
     font-size: 20px;
@@ -47,6 +50,10 @@ img {
 
 }
 
+.downloadBt {
+    margin-left: 15px;
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -54,6 +61,30 @@ form {
 
 .form-group {
     margin-bottom: 15px;
+}
+
+.form-group input {
+    width: 700px;
+    padding: 15px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    width: 700px;
+    padding: 15px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+}
+
+textarea {
+    height: 150px;
 }
 
 .form-group label {
@@ -91,6 +122,19 @@ form {
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     margin-top: var(--spacing);
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #333;
 }
 
 .resume-button:hover {
