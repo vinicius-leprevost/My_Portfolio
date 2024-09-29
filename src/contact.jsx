@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import './default.css';
 import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
+
 
 export default function Contact() {
     const [form, setForm] = useState({
@@ -9,7 +11,8 @@ export default function Contact() {
         phone: '',
         email: '',
         title: '',
-        description: ''
+        description: '',
+        id: ''
     });
 
     const navigate = useNavigate();
@@ -24,20 +27,30 @@ export default function Contact() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const { name, phone, email, title, description } = form;
+        const { name, phone, email, title, description , id} = form;
 
         console.log('Form submitted:', form);
 
-        alert(`Form Submitted!
-        Thank you for contacting us.
-        Here is the information you submitted:
-        - Name: ${name}
-        - Phone: ${phone}
-        - Email: ${email}
-        - Title: ${title}
-        - Description: ${description}`);
-
-        navigate('/');
+        Swal.fire({
+            title: 'Form Submitted!',
+            html: `
+            <p>Thank you for contacting us.</p>
+            <p>Here is the information you submitted:</p>
+            <ul style="text-align: left;">
+              <li><strong>Name:</strong> ${name}</li>
+              <li><strong>Phone:</strong> ${phone}</li>
+              <li><strong>Email:</strong> ${email}</li>
+              <li><strong>Title:</strong> ${title}</li>
+              <li><strong>Description:</strong> ${description}</li>
+              <li><strong>ID:></strong> ${id}</li>
+            </ul>`,
+            icon: 'success',
+            confirmButtonText: 'Close'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                navigate('/');
+            }
+        });
     };
 
     return (
