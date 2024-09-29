@@ -1,15 +1,18 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import './default.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function Contact() {
     const [form, setForm] = useState({
-        nome: '',
+        name: '',
         phone: '',
         email: '',
         title: '',
         description: ''
     });
+
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -21,8 +24,20 @@ export default function Contact() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // handle form submission
+        const { name, phone, email, title, description } = form;
+
         console.log('Form submitted:', form);
+
+        alert(`Form Submitted!
+        Thank you for contacting us.
+        Here is the information you submitted:
+        - Name: ${name}
+        - Phone: ${phone}
+        - Email: ${email}
+        - Title: ${title}
+        - Description: ${description}`);
+
+        navigate('/');
     };
 
     return (
@@ -32,12 +47,12 @@ export default function Contact() {
                 <div className="card">
                     <form onSubmit={handleSubmit}>
                         <div className="form-group">
-                            <label htmlFor="nome">Name</label>
+                            <label htmlFor="name">Name</label>
                             <input
                                 type="text"
                                 id="name"
                                 name="name"
-                                value={form.nome}
+                                value={form.name}
                                 onChange={handleChange}
                                 required
                             />
